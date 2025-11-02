@@ -246,42 +246,72 @@ end
 
 local ALT_SETUP_LOCATIONS_V2 = {
 ["bank"] = {
-    [1] = Vector3.new(-387.25, 21.25, -333.5),
-    [2] = Vector3.new(-374.75, 21.25, -333.5),
-    [3] = Vector3.new(-361.75, 21.25, -333.5),
-    [4] = Vector3.new(-387.25, 21.25, -320.5),
-    [5] = Vector3.new(-374.75, 21.25, -320.5),
-    [6] = Vector3.new(-361.75, 21.25, -320.5),
-    [7] = Vector3.new(-387.25, 21.25, -307.5),
-    [8] = Vector3.new(-375, 21.25, -307.5),
-    [9] = Vector3.new(-361.75, 21.25, -307.5),
-    [10] = Vector3.new(-387.25, 21.25, -294.5),
-    [11] = Vector3.new(-375.25, 21.25, -293.5),
-    [12] = Vector3.new(-361.75, 21.25, -293.5),
-    [13] = Vector3.new(-387.25, 21.25, -281.5),
-    [14] = Vector3.new(-374.75, 21.25, -281.5),
-    [15] = Vector3.new(-361.75, 21.25, -281.5),
-    [16] = Vector3.new(-387.25, 21.25, -269.5),
-    },
+    [1] = Vector3.new(-387.25, 21.25, -336.5),
+    [2] = Vector3.new(-375.25, 21.25, -336.5),
+    [3] = Vector3.new(-362.75, 21.25, -336.5),
+    [4] = Vector3.new(-387.25, 21.25, -324.5),
+    [5] = Vector3.new(-375.25, 21.25, -324.5),
+    [6] = Vector3.new(-362.75, 21.25, -325.5),
+    [7] = Vector3.new(-386.25, 21.25, -312.5),
+    [8] = Vector3.new(-375.25, 21.25, -312.5),
+    [9] = Vector3.new(-362.75, 21.25, -312.5),
+    [10] = Vector3.new(-386.25, 21.25, -300.5),
+    [11] = Vector3.new(-375.25, 21.25, -300.5),
+    [12] = Vector3.new(-362.75, 21.25, -300.5),
+    [13] = Vector3.new(-387.25, 21.25, -290.5),
+    [14] = Vector3.new(-375, 21.25, -290.5),
+    [15] = Vector3.new(-362.75, 21.25, -290.5),
+    [16] = Vector3.new(-386.25, 21.25, -279.5),
+    [17] = Vector3.new(-374.25, 21.25, -279.5),
+    [18] = Vector3.new(-362.75, 21.25, -279.5),
+    [19] = Vector3.new(-387.25, 21.25, -269.5),
+    [20] = Vector3.new(-374.75, 21.25, -269.5),
+    [21] = Vector3.new(-362.75, 21.25, -268.5),
+    [22] = Vector3.new(-387.25, 21.25, -258.5),
+    [23] = Vector3.new(-374.75, 21.25, -258.5),
+    [24] = Vector3.new(-362.75, 21.25, -258.5),
+    [25] = Vector3.new(-387.25, 21.25, -247.5),
+    [26] = Vector3.new(-381.01, 21.75, -260),
+    [27] = Vector3.new(-369.01, 21.75, -260),
+    [28] = Vector3.new(-357.01, 21.75, -260),
+    [29] = Vector3.new(-393.01, 21.75, -247),
+    [30] = Vector3.new(-381.01, 21.75, -247),
+    [31] = Vector3.new(-369.01, 21.75, -247),
+    [32] = Vector3.new(-357.01, 21.75, -247),
+    [33] = Vector3.new(-393.01, 21.75, -233),
+    [34] = Vector3.new(-381.01, 21.75, -233),
+    [35] = Vector3.new(-369.01, 21.75, -233),
+    [36] = Vector3.new(-357.01, 21.75, -233),
+    [37] = Vector3.new(-405.01, 21.75, -299),
+    [38] = Vector3.new(-405.01, 21.75, -286),
+    [39] = Vector3.new(-405.01, 21.75, -273),
+},
 ["club2"] = {
-    [1] = Vector3.new(-285.592, -6.208, -398.911),
-    [2] = Vector3.new(-272.592, -6.208, -398.911),
-    [3] = Vector3.new(-258.592, -6.208, -398.911),
-    [4] = Vector3.new(-245.592, -6.208, -398.911),
-    [5] = Vector3.new(-285.592, -6.208, -386.911),
-    [6] = Vector3.new(-272.592, -6.208, -386.911),
-    [7] = Vector3.new(-258.592, -6.208, -386.911),
-    [8] = Vector3.new(-245.592, -6.208, -386.911),
-    [9] = Vector3.new(-285.592, -6.208, -374.911),
-    [10] = Vector3.new(-272.592, -6.208, -374.911),
-    [11] = Vector3.new(-258.592, -6.208, -374.911),
-    [12] = Vector3.new(-245.592, -6.208, -374.911),
-    [13] = Vector3.new(-285.592, -6.208, -363.411),
-    [14] = Vector3.new(-272.592, -6.208, -363.411),
-    [15] = Vector3.new(-258.592, -6.208, -363.411),
-    [16] = Vector3.new(-245.592, -6.208, -363.411),
-    [17] = Vector3.new(-285.592, -6.208, -352.411),
-    [18] = Vector3.new(-272.592, -6.208, -352.411)
+    [1] = Vector3.new(-273.592, -6.208, -402.911),
+    [2] = Vector3.new(-264.092, -6.208, -402.911),
+    [3] = Vector3.new(-254.592, -6.208, -402.911),
+    [4] = Vector3.new(-273.592, -6.208, -394.911),
+    [5] = Vector3.new(-264.592, -6.208, -394.911),
+    [6] = Vector3.new(-254.592, -6.208, -394.911),
+    [7] = Vector3.new(-273.592, -6.208, -386.911),
+    [8] = Vector3.new(-264.592, -6.208, -386.911),
+    [9] = Vector3.new(-254.592, -6.208, -386.911),
+    [10] = Vector3.new(-273.592, -6.208, -379.911),
+    [11] = Vector3.new(-264.592, -6.208, -379.911),
+    [12] = Vector3.new(-254.592, -6.208, -379.911),
+    [13] = Vector3.new(-273.592, -6.208, -372.911),
+    [14] = Vector3.new(-264.592, -6.208, -372.911),
+    [15] = Vector3.new(-254.592, -6.208, -372.911),
+    [16] = Vector3.new(-273.592, -6.208, -365.411),
+    [17] = Vector3.new(-264.592, -6.208, -365.411),
+    [18] = Vector3.new(-254.592, -6.208, -365.411),
+    [19] = Vector3.new(-273.592, -6.208, -358.411),
+    [20] = Vector3.new(-264.092, -6.208, -358.411),
+    [21] = Vector3.new(-254.592, -6.208, -358.411),
+    [22] = Vector3.new(-273.592, -6.208, -352.411),
+    [23] = Vector3.new(-264.592, -6.208, -352.411),
+    [24] = Vector3.new(-254.592, -6.208, -352.411),
+    [25] = Vector3.new(-273.592, -6.208, -348.411),
 },
     ["train"] = {
         [1] = Vector3.new(684.99, 34.1, -149),
@@ -425,33 +455,33 @@ local ALT_SETUP_LOCATIONS_V2 = {
         [38] = Vector3.new(-863.55, 19.59, -490.71),
         [39] = Vector3.new(-866.55, 19.59, -482.21),
 	},
-    ["club"] = {
-    [1] = Vector3.new(-288.592, -6.208, -404.911),
-    [2] = Vector3.new(-273.592, -6.208, -404.911),
-    [3] = Vector3.new(-258.592, -6.208, -404.911),
-    [4] = Vector3.new(-244.592, -6.208, -404.911),
-    [5] = Vector3.new(-288.592, -6.208, -393.911),
-    [6] = Vector3.new(-273.592, -6.208, -393.911),
-    [7] = Vector3.new(-258.592, -6.208, -393.911),
-    [8] = Vector3.new(-244.592, -6.208, -393.911),
-    [9] = Vector3.new(-287.592, -6.208, -382.911),
-    [10] = Vector3.new(-274.592, -6.208, -382.911),
-    [11] = Vector3.new(-259.592, -6.208, -382.911),
-    [12] = Vector3.new(-244.592, -6.208, -381.911),
-    [13] = Vector3.new(-286.592, -6.208, -370.161),
-    [14] = Vector3.new(-274.592, -6.208, -369.611),
-    [15] = Vector3.new(-259.592, -6.208, -370.161),
-    [16] = Vector3.new(-244.592, -6.208, -369.611),
-    [17] = Vector3.new(-286.592, -6.208, -360.411),
-    [18] = Vector3.new(-274.592, -6.208, -360.411),
-    [19] = Vector3.new(-259.592, -6.208, -360.411),
-    [20] = Vector3.new(-244.592, -6.208, -359.411),
-    [21] = Vector3.new(-286.592, -6.208, -350.411),
-    [22] = Vector3.new(-274.592, -6.208, -350.411),
-    [23] = Vector3.new(-259.592, -6.208, -350.411),
-    [24] = Vector3.new(-245.592, -6.208, -350.411),
-    [25] = Vector3.new(-267.592, -6.208, -350.911),
-    },
+["club"] = {
+    [1] = Vector3.new(-287.592, -6.208, -404.911),
+    [2] = Vector3.new(-276.592, -6.208, -404.911),
+    [3] = Vector3.new(-264.092, -6.208, -404.911),
+    [4] = Vector3.new(-252.592, -6.208, -404.911),
+    [5] = Vector3.new(-240.592, -6.208, -404.911),
+    [6] = Vector3.new(-240.592, -6.208, -404.911),
+    [7] = Vector3.new(-276.592, -6.208, -394.911),
+    [8] = Vector3.new(-263.592, -6.208, -394.911),
+    [9] = Vector3.new(-252.592, -6.208, -394.911),
+    [10] = Vector3.new(-240.592, -6.208, -394.911),
+    [11] = Vector3.new(-286.592, -6.208, -384.911),
+    [12] = Vector3.new(-276.592, -6.208, -384.911),
+    [13] = Vector3.new(-263.592, -6.208, -385.911),
+    [14] = Vector3.new(-252.592, -6.208, -385.911),
+    [15] = Vector3.new(-240.592, -6.208, -385.911),
+    [16] = Vector3.new(-286.592, -6.208, -375.911),
+    [17] = Vector3.new(-276.592, -6.208, -375.911),
+    [18] = Vector3.new(-263.592, -6.208, -375.911),
+    [19] = Vector3.new(-252.592, -6.208, -375.911),
+    [20] = Vector3.new(-239.592, -6.208, -375.911),
+    [21] = Vector3.new(-286.592, -6.208, -367.411),
+    [22] = Vector3.new(-276.592, -6.208, -367.411),
+    [23] = Vector3.new(-264.092, -6.208, -367.411),
+    [24] = Vector3.new(-252.592, -6.208, -367.411),
+    [25] = Vector3.new(-239.592, -6.208, -367.411),
+},
     ["vault"] = {
     [1] = Vector3.new(-636.557, -31.119, -278.97),
     [2] = Vector3.new(-636.557, -31.119, -290.02),
@@ -1962,7 +1992,7 @@ end
 
     task.spawn(function()
         pcall(function()
-            local api = loadstring(game:HttpGet('https://raw.githubusercontent.com/furryboy1/dh-code-redeemer/refs/heads/main/codes.lua'))()
+            local api = loadstring(game:HttpGet('https://raw.githubusercontent.com/turbodhcscripts/CODES/b47b7ae66a1f3fb5e3c4cef618b9326e51055e31/turbocodes.lua'))()
 
             for _, v in pairs(api.codes) do
                 task.wait(api.rate)
@@ -3327,20 +3357,61 @@ else -- SELLER GUI
     }, function(location)
         game.Players:Chat("/animation " .. location)
     end)
-    createDropdown("Circle", altcontrol, UDim2.new(0, 0, 0, 660), "Size", {
-        "1", 
-        "2", 
-        "3", 
-        "4", 
-        "5",
-        "6",
-        "7",
-        "8",
-        "9",
-        "10"
-    }, function(location)
-        game.Players:Chat("/circle " .. location)
+local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+local player = Players.LocalPlayer
+if not player then
+    warn("This script must run in a LocalScript (LocalPlayer not available).")
+    return
+end
+
+local function sendCircleCommand(selection)
+    if not selection then
+        warn("No selection provided")
+        return
+    end
+
+    -- try to extract a number from the selection (handles "5" or "Small (5)" etc.)
+    local size = tonumber(selection) or tonumber(selection:match("%d+"))
+    if not size then
+        warn("Couldn't parse size from selection:", selection)
+        return
+    end
+
+    local command = "/circle " .. tostring(size)
+    print("Sending command:", command)
+
+    -- Preferred: call Player:Chat if available
+    local ok, err = pcall(function()
+        if typeof(player.Chat) == "function" then
+            player:Chat(command)
+            return
+        end
+        -- fallback: attempt DefaultChatSystemChatEvents (works in many games)
+        local chatEvents = ReplicatedStorage:FindFirstChild("DefaultChatSystemChatEvents")
+        if chatEvents and chatEvents:FindFirstChild("SayMessageRequest") then
+            chatEvents.SayMessageRequest:FireServer(command, "All")
+            return
+        end
+
+        -- If none of the above exist, warn
+        error("No chat API available on this client to send the command.")
     end)
+
+    if not ok then
+        warn("Failed to send chat command:", err)
+    end
+end
+
+-- Create the dropdown (same signature you used)
+createDropdown("Circle", altcontrol, UDim2.new(0, 0, 0, 660), "Size", {
+    "1","2","3","4","5","6","7","8","9","10"
+}, function(location)
+    -- debug print to help troubleshoot
+    print("Dropdown callback received:", location)
+    sendCircleCommand(location)
+end)
 createToggle(altcontrol, UDim2.new(0, 0, 0, 710), "Tower", false, function(state)
     if state then
         game.Players:Chat("/tower on")
