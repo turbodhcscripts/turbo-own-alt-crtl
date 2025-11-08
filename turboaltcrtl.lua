@@ -1249,7 +1249,7 @@ if isAlt(PLAYER.UserId) == true then
 
     --Functions
     local function capFps(amount)
-        if not amount then amount = 3 end
+        if not amount then amount = 5 end
         FpsLockBox.Text = amount
 
         --RunService:setThrottleFramerateEnabled(true)
