@@ -2215,65 +2215,63 @@ else -- SELLER GUI
     
     
     
-    -- Function to create a dynamic box to display PFP, username, and cash balance
-    local function createProfileBox(parent, player, position)
-        local box = Instance.new("Frame", parent)
-        box.Size = UDim2.new(0, 379, 0, 80)  -- Fixed height for each profile box
-        box.Position = position  -- Position passed in as argument
-        box.BackgroundColor3 = Color3.fromRGB(28, 28, 28)
-        box.BorderSizePixel = 0
-        box.Name = "ProfileBox_" .. player.UserId  -- Unique name for the box
+-- Function to create a dynamic box to display PFP, username, and cash balance
+local function createProfileBox(parent, player, position)
+    local box = Instance.new("Frame", parent)
+    box.Size = UDim2.new(0, 379, 0, 80)
+    box.Position = position
+    box.BackgroundColor3 = Color3.fromRGB(0, 0, 255) -- BLUE
+    box.BorderSizePixel = 0
+    box.Name = "ProfileBox_" .. player.UserId
+
+    local uicorner13 = Instance.new("UICorner", box)
+
+    local PLACEHOLDER_IMAGE = "rbxassetid://0"
+
+    local pfp = Instance.new("ImageLabel", box)
+    pfp.Parent = box
+    pfp.BorderSizePixel = 0
+    pfp.BackgroundColor3 = Color3.fromRGB(0, 0, 0) -- BLACK
+    pfp.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+    pfp.Size = UDim2.new(0, 40, 0, 40)
+    pfp.BorderColor3 = Color3.fromRGB(255, 255, 255) -- WHITE BORDER
+    pfp.Position = UDim2.new(0, 10, 0, 10)
     
-        local uicorner13 = Instance.new("UICorner", box)
+    local userId = player.UserId
+    local thumbType = Enum.ThumbnailType.HeadShot
+    local thumbSize = Enum.ThumbnailSize.Size420x420
+    local content, isReady = game:GetService("Players"):GetUserThumbnailAsync(userId, thumbType, thumbSize)
     
-        local PLACEHOLDER_IMAGE = "rbxassetid://0"
+    pfp.Image = (isReady and content) or PLACEHOLDER_IMAGE
     
-        local pfp = Instance.new("ImageLabel", box)
-        pfp.Parent = box
-        pfp["BorderSizePixel"] = 0;
-        pfp["BackgroundColor3"] = Color3.fromRGB(34, 34, 34);
-        pfp["Image"] = "rbxasset://textures/ui/GuiImagePlaceholder.png";
-        pfp["Size"] = UDim2.new(0, 40, 0, 40);
-        pfp["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-        pfp.Position = UDim2.new(0, 10, 0, 10)
-        
-        local userId = player.UserId
-        local thumbType = Enum.ThumbnailType.HeadShot
-        local thumbSize = Enum.ThumbnailSize.Size420x420
-        local content, isReady = game:GetService("Players"):GetUserThumbnailAsync(userId, thumbType, thumbSize)
-        
-        pfp.Image =  (isReady and content) or PLACEHOLDER_IMAGE
-        
-        
-        uicorner2 = Instance.new("UICorner", pfp);
-        uicorner2["CornerRadius"] = UDim.new(1, 0);
-        
-        
-        -- StarterGui.ScreenGui.Frame.ScrollingFrame.Frame.ImageLabel.UIStroke
-        stroke2 = Instance.new("UIStroke", pfp);
-        stroke2["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-        stroke2["Color"] = Color3.fromRGB(0, 255, 0);
+    uicorner2 = Instance.new("UICorner", pfp)
+    uicorner2.CornerRadius = UDim.new(1, 0)
     
-        -- Username Label
-        local usernameLabel = Instance.new("TextLabel", box)
-        usernameLabel.Size = UDim2.new(0, 200, 0, 25)
-        usernameLabel.Position = UDim2.new(0, 70, 0, 10)  -- Adjusted position
-        usernameLabel.BackgroundTransparency = 1
-        usernameLabel.Text = player.Name  -- Player's Username
-        usernameLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-        usernameLabel.Font = Enum.Font.GothamBold
-        usernameLabel.TextSize = 16
+    stroke2 = Instance.new("UIStroke", pfp)
+    stroke2.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+    stroke2.Color = Color3.fromRGB(0, 255, 0) -- GREEN
     
-        -- Cash Balance Label
-        local cashBalanceLabel = Instance.new("TextLabel", box)
-        cashBalanceLabel.Size = UDim2.new(0, 200, 0, 25)
-        cashBalanceLabel.Position = UDim2.new(0, 70, 0, 40)  -- Adjusted position
-        cashBalanceLabel.BackgroundTransparency = 0
-        cashBalanceLabel.Text = format(player:WaitForChild("DataFolder"):WaitForChild("Currency").Value)
-        cashBalanceLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-        cashBalanceLabel.Font = Enum.Font.GothamBold
-        cashBalanceLabel.TextSize = 16
-    
+    -- Username Label
+    local usernameLabel = Instance.new("TextLabel", box)
+    usernameLabel.Size = UDim2.new(0, 200, 0, 25)
+    usernameLabel.Position = UDim2.new(0, 70, 0, 10)
+    usernameLabel.BackgroundTransparency = 1
+    usernameLabel.Text = player.Name
+    usernameLabel.TextColor3 = Color3.fromRGB(255, 255, 255) -- WHITE
+    usernameLabel.Font = Enum.Font.GothamBold
+    usernameLabel.TextSize = 16
+
+    -- Cash Balance Label
+    local cashBalanceLabel = Instance.new("TextLabel", box)
+    cashBalanceLabel.Size = UDim2.new(0, 200, 0, 25)
+    cashBalanceLabel.Position = UDim2.new(0, 70, 0, 40)
+    cashBalanceLabel.BackgroundTransparency = 0
+    cashBalanceLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0) -- BLACK
+    cashBalanceLabel.Text = format(player:WaitForChild("DataFolder"):WaitForChild("Currency").Value)
+    cashBalanceLabel.TextColor3 = Color3.fromRGB(0, 255, 0) -- GREEN
+    cashBalanceLabel.Font = Enum.Font.GothamBold
+    cashBalanceLabel.TextSize = 16
+		
         player:WaitForChild("DataFolder"):WaitForChild("Currency").Changed:Connect(function()
             cashBalanceLabel.Text = format(player:WaitForChild("DataFolder"):WaitForChild("Currency").Value)
         end)
