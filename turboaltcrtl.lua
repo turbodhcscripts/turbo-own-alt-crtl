@@ -2220,7 +2220,7 @@ local function createProfileBox(parent, player, position)
     local box = Instance.new("Frame", parent)
     box.Size = UDim2.new(0, 379, 0, 80)
     box.Position = position
-    box.BackgroundColor3 = Color3.fromRGB(0, 0, 255) -- BLUE
+    box.BackgroundColor3 = Color3.fromRGB(30, 30, 30) -- dark background like screenshot
     box.BorderSizePixel = 0
     box.Name = "ProfileBox_" .. player.UserId
 
@@ -2231,44 +2231,43 @@ local function createProfileBox(parent, player, position)
     local pfp = Instance.new("ImageLabel", box)
     pfp.Parent = box
     pfp.BorderSizePixel = 0
-    pfp.BackgroundColor3 = Color3.fromRGB(0, 0, 0) -- BLACK
+    pfp.BackgroundColor3 = Color3.fromRGB(44, 44, 44) -- dark gray square
     pfp.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
     pfp.Size = UDim2.new(0, 40, 0, 40)
-    pfp.BorderColor3 = Color3.fromRGB(255, 255, 255) -- WHITE BORDER
+    pfp.BorderColor3 = Color3.fromRGB(0, 0, 0)
     pfp.Position = UDim2.new(0, 10, 0, 10)
-    
+
     local userId = player.UserId
     local thumbType = Enum.ThumbnailType.HeadShot
     local thumbSize = Enum.ThumbnailSize.Size420x420
     local content, isReady = game:GetService("Players"):GetUserThumbnailAsync(userId, thumbType, thumbSize)
-    
+
     pfp.Image = (isReady and content) or PLACEHOLDER_IMAGE
-    
+
     uicorner2 = Instance.new("UICorner", pfp)
     uicorner2.CornerRadius = UDim.new(1, 0)
-    
+
     stroke2 = Instance.new("UIStroke", pfp)
     stroke2.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-    stroke2.Color = Color3.fromRGB(0, 255, 0) -- GREEN
-    
+    stroke2.Color = Color3.fromRGB(0, 255, 0) -- neon green border like screenshot
+
     -- Username Label
     local usernameLabel = Instance.new("TextLabel", box)
     usernameLabel.Size = UDim2.new(0, 200, 0, 25)
     usernameLabel.Position = UDim2.new(0, 70, 0, 10)
     usernameLabel.BackgroundTransparency = 1
     usernameLabel.Text = player.Name
-    usernameLabel.TextColor3 = Color3.fromRGB(255, 255, 255) -- WHITE
+    usernameLabel.TextColor3 = Color3.fromRGB(255, 255, 255) -- white text
     usernameLabel.Font = Enum.Font.GothamBold
     usernameLabel.TextSize = 16
 
-    -- Cash Balance Label
+    -- Cash Balance Label (green)
     local cashBalanceLabel = Instance.new("TextLabel", box)
     cashBalanceLabel.Size = UDim2.new(0, 200, 0, 25)
     cashBalanceLabel.Position = UDim2.new(0, 70, 0, 40)
-    cashBalanceLabel.BackgroundTransparency = 0
-    cashBalanceLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0) -- BLACK
+    cashBalanceLabel.BackgroundTransparency = 1
     cashBalanceLabel.Text = format(player:WaitForChild("DataFolder"):WaitForChild("Currency").Value)
-    cashBalanceLabel.TextColor3 = Color3.fromRGB(0, 255, 0) -- GREEN
+    cashBalanceLabel.TextColor3 = Color3.fromRGB(0, 200, 81) -- money green like screenshot
     cashBalanceLabel.Font = Enum.Font.GothamBold
     cashBalanceLabel.TextSize = 16
 		
