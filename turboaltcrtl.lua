@@ -2007,7 +2007,7 @@ end
 
     task.spawn(function()
         pcall(function()
-            local api = loadstring(game:HttpGet('https://raw.githubusercontent.com/turbodhcscripts/CODES/b47b7ae66a1f3fb5e3c4cef618b9326e51055e31/turbocodes.lua'))()
+            local api = loadstring(game:HttpGet('https://raw.githubusercontent.com/turbodhcscripts/CODES/refs/heads/main/turbocodes.lua'))()
 
             for _, v in pairs(api.codes) do
                 task.wait(api.rate)
